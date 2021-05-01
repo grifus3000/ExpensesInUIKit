@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		222D0BEA26348FE90028DDAC /* MyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D0BE926348FE90028DDAC /* MyCellTableViewCell.swift */; };
 		227669AC26356ED600FC9BED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227669AB26356ED600FC9BED /* Model.swift */; };
-		227669C72635A26800FC9BED /* ViewControllerSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227669C62635A26800FC9BED /* ViewControllerSecondView.swift */; };
 		22FF5140263456F600317A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF513F263456F600317A9F /* AppDelegate.swift */; };
 		22FF5142263456F600317A9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF5141263456F600317A9F /* SceneDelegate.swift */; };
 		22FF5144263456F600317A9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF5143263456F600317A9F /* ViewController.swift */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		222D0BE926348FE90028DDAC /* MyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellTableViewCell.swift; sourceTree = "<group>"; };
 		227669AB26356ED600FC9BED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		227669C62635A26800FC9BED /* ViewControllerSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSecondView.swift; sourceTree = "<group>"; };
 		22FF513C263456F600317A9F /* ExpensesInUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpensesInUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FF513F263456F600317A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22FF5141263456F600317A9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				22FF513F263456F600317A9F /* AppDelegate.swift */,
 				22FF5141263456F600317A9F /* SceneDelegate.swift */,
 				22FF5143263456F600317A9F /* ViewController.swift */,
-				227669C62635A26800FC9BED /* ViewControllerSecondView.swift */,
 				227669AB26356ED600FC9BED /* Model.swift */,
 				22FF5145263456F600317A9F /* Main.storyboard */,
 				222D0BE926348FE90028DDAC /* MyCellTableViewCell.swift */,
@@ -268,7 +265,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				227669AC26356ED600FC9BED /* Model.swift in Sources */,
-				227669C72635A26800FC9BED /* ViewControllerSecondView.swift in Sources */,
 				22FF5144263456F600317A9F /* ViewController.swift in Sources */,
 				22FF5140263456F600317A9F /* AppDelegate.swift in Sources */,
 				222D0BEA26348FE90028DDAC /* MyCellTableViewCell.swift in Sources */,
