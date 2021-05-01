@@ -5,7 +5,6 @@
 //  Created by Grifus on 24.04.2021.
 //
 
-//some
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
