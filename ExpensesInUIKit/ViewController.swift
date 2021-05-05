@@ -7,10 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UISearchBarDelegate {
     var worker = mainWork()
     
+    var dataForTable: [SuperStract] = []
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var labelForSum: UILabel!
     @IBOutlet weak var VStackForTotalSum: UIStackView!
     let tableId = "cell"
@@ -22,14 +24,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
+        
         tableForContent.delegate = self
         tableForContent.dataSource = self
+        
         leftField.delegate = self
         rightField.delegate = self
+        
         tableForContent.layer.cornerRadius = 0
+        
         worker.loadData()
+        
         VStackForTotalSum.layer.cornerRadius = 10
+        
         worker.sum(lable: labelForSum)
+        
+        dataToNewVar()
+    }
+    
+    func dataToNewVar() {
+        dataForTable = worker.structData
     }
     
     //скрыть клавиатуру при нажатии в любом месте
@@ -37,7 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.endEditing(true)
     }
 
-    //скрытть клавиатуру при нажатии клавиши return
+    //скрыть клавиатуру при нажатии клавиши return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         leftField.resignFirstResponder()
         return true
@@ -45,15 +61,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //переопределение функции для количества ячеек
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return worker.allDataInStruct.count
+        return dataForTable.count
     }
     
     //переопределение функции для создания ячеек
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableForContent.dequeueReusableCell(withIdentifier: tableId, for: indexPath) as? MyCellTableViewCell {
             
-            cell.nameOne.text = worker.allDataInStruct[indexPath.row].titleOfStruct
-            cell.nameTwo.text = worker.allDataInStruct[indexPath.row].priceOfStruct
+            cell.nameOne.text = dataForTable[indexPath.row].titleOfStruct
+            cell.nameTwo.text = dataForTable[indexPath.row].priceOfStruct
 
         return cell
         }
@@ -80,6 +96,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if editingStyle == .delete {
             worker.deleteItem(index: indexPath.row, view: self, indexP: indexPath)
             worker.sum(lable: labelForSum)
+
         }
     }
     
@@ -97,6 +114,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
         worker.sum(lable: labelForSum)
     }
-
+    
+    //переопределяем метод для поиска в SearchBar
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let data = worker.structData
+        //записываем данные, которые будут в таблице, после ввода символов
+        dataForTable = searchText.isEmpty ? data : data.filter({ (dataString) -> Bool in
+            return dataString.titleOfStruct.range(of: searchText, options: .caseInsensitive) != nil
+        })
+        tableForContent.reloadData()
+    }
+    
 }
 

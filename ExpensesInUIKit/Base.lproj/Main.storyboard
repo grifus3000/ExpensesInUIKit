@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xza-9h-Yjo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="hKy-Hz-LMe">
+            <objects>
+                <tabBarController id="Xza-9h-Yjo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6lk-bc-jmk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="R9n-1N-ZT8"/>
+                        <segue destination="9Jz-Ok-vbE" kind="relationship" relationship="viewControllers" id="AaP-9f-prb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGC-zD-04d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1932" y="41"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="IYm-qF-lks">
+            <objects>
+                <viewController id="9Jz-Ok-vbE" customClass="ViewControllerSecondView" customModule="ExpensesInUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tns-mm-xP2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here will be something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-Gb-gkd">
+                                <rect key="frame" x="120.5" y="437.5" width="173.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zvk-zM-4W4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5EG-Gb-gkd" firstAttribute="centerX" secondItem="tns-mm-xP2" secondAttribute="centerX" id="0UR-iP-A0z"/>
+                            <constraint firstItem="5EG-Gb-gkd" firstAttribute="centerY" secondItem="tns-mm-xP2" secondAttribute="centerY" id="Ut9-Cy-jVi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ncV-Ui-MIS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1E-M5-92H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1013" y="317"/>
+        </scene>
+        <!--Expenses-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExpensesInUIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,10 +70,15 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZPe-0I-B1a">
-                                <rect key="frame" x="0.0" y="138" width="414" height="574"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="525"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="8S6-j3-XGJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="73" id="Zk8-qb-uf1" customClass="MyCellTableViewCell" customModule="ExpensesInUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="55.5" width="374" height="73"/>
+                                        <rect key="frame" x="20" y="99.5" width="374" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zk8-qb-uf1" id="MyK-FC-w6P">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="73"/>
@@ -76,7 +127,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="30N-4G-gNm">
-                                <rect key="frame" x="10" y="717" width="394" height="45"/>
+                                <rect key="frame" x="10" y="668" width="394" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDN-1e-Ymh">
                                         <rect key="frame" x="0.0" y="0.0" width="197" height="45"/>
@@ -115,20 +166,25 @@
                             <constraint firstItem="6aq-Uz-JNo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wBh-Oq-zYD"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Expenses" id="7oi-LF-2fh"/>
                     <connections>
                         <outlet property="VStackForTotalSum" destination="30N-4G-gNm" id="SQd-WG-Lg5"/>
                         <outlet property="labelForSum" destination="Yh2-AV-s2E" id="UDx-vt-3is"/>
                         <outlet property="leftField" destination="WlK-C7-Loq" id="DQn-gm-Yfy"/>
                         <outlet property="rightField" destination="kZC-Og-qXf" id="9FB-2v-znC"/>
+                        <outlet property="searchBar" destination="8S6-j3-XGJ" id="HTc-3k-u1b"/>
                         <outlet property="tableForContent" destination="ZPe-0I-B1a" id="M5P-j1-gbl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="61.607142857142854"/>
+            <point key="canvasLocation" x="-1010" y="-358"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
