@@ -29,7 +29,7 @@
         <!--Item-->
         <scene sceneID="IYm-qF-lks">
             <objects>
-                <viewController id="9Jz-Ok-vbE" customClass="ViewControllerSecondView" customModule="ExpensesInUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Jz-Ok-vbE" customClass="ViewControllerSecond" customModule="ExpensesInUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tns-mm-xP2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

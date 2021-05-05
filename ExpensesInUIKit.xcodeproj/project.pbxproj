@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		222D0BEA26348FE90028DDAC /* MyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D0BE926348FE90028DDAC /* MyCellTableViewCell.swift */; };
+		225B5F9B2642C8350042E501 /* ViewControllerSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B5F9A2642C8350042E501 /* ViewControllerSecond.swift */; };
 		227669AC26356ED600FC9BED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227669AB26356ED600FC9BED /* Model.swift */; };
 		22FF5140263456F600317A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF513F263456F600317A9F /* AppDelegate.swift */; };
 		22FF5142263456F600317A9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF5141263456F600317A9F /* SceneDelegate.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		222D0BE926348FE90028DDAC /* MyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellTableViewCell.swift; sourceTree = "<group>"; };
+		225B5F9A2642C8350042E501 /* ViewControllerSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSecond.swift; sourceTree = "<group>"; };
 		227669AB26356ED600FC9BED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		22FF513C263456F600317A9F /* ExpensesInUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpensesInUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FF513F263456F600317A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				22FF5148263456F800317A9F /* Assets.xcassets */,
 				22FF514A263456F800317A9F /* LaunchScreen.storyboard */,
 				22FF514D263456F800317A9F /* Info.plist */,
+				225B5F9A2642C8350042E501 /* ViewControllerSecond.swift */,
 			);
 			path = ExpensesInUIKit;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				22FF5144263456F600317A9F /* ViewController.swift in Sources */,
 				22FF5140263456F600317A9F /* AppDelegate.swift in Sources */,
 				222D0BEA26348FE90028DDAC /* MyCellTableViewCell.swift in Sources */,
+				225B5F9B2642C8350042E501 /* ViewControllerSecond.swift in Sources */,
 				22FF5142263456F600317A9F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
